@@ -27,3 +27,30 @@ async function getWeatherByCity(city) {
 function getIconById (id) {
     return `http://openweathermap.org/img/wn/${id}@2x.png`
 }
+const button = document.getElementById("search-city")
+
+button.addEventListener('click', async function inputValue() {
+    //Press button will get the value from the input
+    const city = document.getElementsByTagName("input")[0].value
+    //The input value is passed into the function getWeatherByCity
+    const weatherConditions = await getWeatherByCity(city)
+    //Show the weather results on the right column for current weather
+    console.log(weatherConditions)
+    const cityDate = weatherConditions.list[0].dt_txt
+    const cityTemp =  weatherConditions.list[0].main.temp
+    const cityWind = weatherConditions.list[0].wind.speed
+    const cityHumid = weatherConditions.list[0].main.humidity
+    const weatherImg = getIconById(weatherConditions.list[0].weather[0].icon)
+    //Show the weather results on the right column for the forecast 
+    var weatherResults = document.querySelector("#current-weather", options)
+        .then(function (response) {
+            return response.json();
+        })
+        
+    //Create elements, append values to the element and then append it to the current-weather in html 
+    
+})
+
+//Right column is split between two rows; current weather and future weather 
+//Future weather we want split into 5 days 
+//Left column save the city as a button with longitude and latitude in local storage 
