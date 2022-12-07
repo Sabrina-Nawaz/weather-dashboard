@@ -37,4 +37,39 @@ function renderWeatherDashboard(cityName) {
     });
 }
 
+// Function to show the five day forecast
+function fiveDayForecast(cityName) {
+  fetch(weatherAPI + cityName)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      forecast.innerHTML = " ";
+      days = [0, 7, 15, 23, 31];
+      days.forEach(function (i) {
+        let divEl = document.createElement("div");
+        let forecastDate = document.createElement("p");
+        let forecastTemp = document.createElement("p");
+        let forecastWind = document.createElement("p");
+        let forecastHumidity = document.createElement("p");
+        let forecastPicture = document.createElement("img");
+        forecastDate.textContent = "Date: " + data.list[i].dt_txt.split(" ")[0];
+        forecastTemp.textContent =
+          "Temperature: " + data.list[i].main.temp + "°C";
+        forecastWind.textContent =
+          "Wind Speed: " + data.list[i].wind.speed + "Km/h";
+        forecastHumidity.textContent =
+          "Humidity: " + data.list[i].main.humidity + "%";
+        divEl.setAttribute("class", "fiveDayForecastCard");
+        forecastPicture.src = `http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`;
+        divEl.appendChild(forecastDate);
+        divEl.appendChild(forecastPicture);
+        divEl.appendChild(forecastTemp);
+        divEl.appendChild(forecastWind);
+        divEl.appendChild(forecastHumidity);
+        forecast.appendChild(divEl);
+      });
+    });
+}
+
 
