@@ -101,4 +101,12 @@ searchButton.addEventListener("click", function (event) {
   localStorageCity();
 });
 
+//Uses local store when the page loads
+localStorageCity();
 
+//Displays city history as the search result
+ulHistory.addEventListener("click", function (event) {
+  let city = event.target.textContent;
+  renderWeatherDashboard(city);
+  fiveDayForecast(city);
+});
