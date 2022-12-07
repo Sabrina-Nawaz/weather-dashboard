@@ -85,4 +85,20 @@ function localStorageCity() {
   }
 }
 
+//Click event function for the search button
+searchButton.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  let city = searchInput.value;
+  if (cityHistory.indexOf(city) == -1) {
+    cityHistory.push(city);
+  }
+
+  localStorage.setItem("cities", JSON.stringify(cityHistory));
+  //Call on Functions
+  renderWeatherDashboard(city);
+  fiveDayForecast(city);
+  localStorageCity();
+});
+
 
