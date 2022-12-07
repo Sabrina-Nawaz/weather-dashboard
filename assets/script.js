@@ -72,4 +72,17 @@ function fiveDayForecast(cityName) {
     });
 }
 
+//Function for local storage
+function localStorageCity() {
+  //Empty the html element container of the button list items
+  let ulHistory = document.querySelector("#ulhistory");
+  ulHistory.innerHTML = " ";
+  for (let i = 0; i < cityHistory.length; i++) {
+    let historyList = document.createElement("li");
+    historyList.textContent = cityHistory[i];
+    historyList.setAttribute("class", "historyList");
+    ulHistory.appendChild(historyList);
+  }
+}
+
 
