@@ -7,30 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <main>
-        <h1>Weather Dashboard</h1>
-    </main>
     <aside class="history">
-
+        <h1>Weather Dashboard</h1>
         <div class="navbar navbar-light bg-light">
             <div class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search for a City" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" id="search-city" type="submit">Search</button>
+                <input class="form-control mr-sm-2 searchInput" type="search" placeholder="Search for a City" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 searchButton" id="search-city" type="submit">Search</button>
             </div>
         </div>
-        <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
-        <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
-        <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+        <div id="ulhistory">
+
+        </div>
+
     </aside>
     <div id="right-column">
-        <div id="current-weather"></div>
+        <div>
+            <div class="current-cityName"></div>
+            <div class="current-weather"></div>
+            <div class="current-temp"></div>
+            <div class="current-wind"></div>
+            <div class="current-humid"></div>
+            <img class="current-weatherImg" />
+        </div>
         <div>
             <h2>5-Day Forecast</h2>
-            <div id="forecast"></div>
+            <div class="forecast"></div>
         </div>
 
     </div>
