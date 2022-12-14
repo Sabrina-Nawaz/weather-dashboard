@@ -18,6 +18,9 @@ The Weather Dashboard is a simple web application which displays the current and
 - [Credits](#credits)
 
   ***
+Deployed Website: https://sabrina-nawaz.github.io/weather-dashboard/
+
+<img width="1428" alt="Screenshot 2022-12-14 at 9 41 34 AM" src="https://user-images.githubusercontent.com/61954667/207627326-f50eaab0-e8c3-44ce-aa43-38729199f543.png">
 
 ## Usage & Installation
 
