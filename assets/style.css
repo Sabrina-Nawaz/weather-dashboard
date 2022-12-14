@@ -3,6 +3,9 @@ body {
     gap: 32px;
     height: 100vh;
     width: 100%;
+    padding: 16px;
+    color: rgb(19, 50, 92);
+    background-color: rgb(253, 254, 255);;
 }
 
 body h1 {
@@ -11,41 +14,109 @@ body h1 {
 }
 
 h2 {
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     align-items: center;
 }
 
-#forecast {
+.forecast {
     display: flex;
     gap: 16px;
-    padding: 10px;
+    flex-direction: row;
 }
 
-#forecast img {
+.forecast img {
     width: 100px;
     border: 1px solid rgb(237, 240, 245);
     margin: 16px 0 0 16px;
     border-radius: 4px;
 }
 
+.fiveDayForecastCard {
+    padding: 6px;
+    border-radius: 6px;
+    border: 2px solid rgb(152, 169, 193);
+}
+
 #right-column {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 #right-column > div:first-of-type {
     border: 1px solid grey;
     border-radius: 4px;
+}
+#right-column h1 {
+font-size: 25px;
 }
 
 #current-weather {
     font-weight: bold;
     font-size: 30px;
 }
-
-.history {
+#ulhistory { 
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 6px;
+}
+#ulhistory li {
+    list-style-type: none;
+    padding: 20px;
+    
+background-color: rgb(71, 112, 169);
+  border: 15px;
+  margin-left: 20px;
+  border-radius: 5px;
+  color: white;
+  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
 }
 
+ul {
+    border: 1px solid rgb(4, 7, 11);
+}
+
+h1, h2 {
+    color: rgb(67, 66, 66)
+}
+
+#backgroundimg {
+    background-image: url("https://cdn.shopify.com/s/files/1/0011/6005/2795/articles/169_83bcfd50-a060-4323-bea2-2ea126654f28.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 150px;
+    background-position: center -290px;
+    background-size: cover;
+    
+}
+
+.history h1 {
+    background-color: rgb(71, 112, 169);
+    border-radius: 5px;
+    padding: 16px;
+    color: white;
+    font-size: 25px;
+}
+
+#display-forecast h2 {
+    font-size: 25px;
+}
+
+.navbar {
+padding: 0 !important;
+}
+
+.historyList {
+    margin: 0 !important;
+}
+
+.form-inline {
+    flex-flow: row !important;
+
+    margin-bottom: 8px;
+}

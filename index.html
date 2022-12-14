@@ -17,7 +17,7 @@
         <div class="navbar navbar-light bg-light">
             <div class="form-inline">
                 <input class="form-control mr-sm-2 searchInput" type="search" placeholder="Search for a City" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 searchButton" id="search-city" type="submit">Search</button>
+                <button class="btn btn-outline-info my-2 my-sm-0 searchButton" id="search-city" type="submit">Search</button>
             </div>
         </div>
         <div id="ulhistory">
@@ -25,7 +25,9 @@
         </div>
 
     </aside>
-    <div id="right-column">
+    
+    <div id="right-column"><div id="backgroundimg"></div>
+        <h1>Current Weather</h1>
         <div>
             <div class="current-cityName"></div>
             <div class="current-weather"></div>
@@ -34,7 +36,7 @@
             <div class="current-humid"></div>
             <img class="current-weatherImg" />
         </div>
-        <div>
+        <div id="display-forecast">
             <h2>5-Day Forecast</h2>
             <div class="forecast"></div>
         </div>
